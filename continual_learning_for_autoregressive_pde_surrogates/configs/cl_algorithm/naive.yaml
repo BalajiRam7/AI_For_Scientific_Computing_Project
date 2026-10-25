@@ -1,0 +1,11 @@
+algorithm_name: naive
+
+algorithm_parameters:
+  optimizer: adam
+  optimizer_params:
+    lr: 0.0001
+  criterion: mse
+  criterion_params: {}
+  batch_size: 32
+  epochs: 5
+  num_workers: 0

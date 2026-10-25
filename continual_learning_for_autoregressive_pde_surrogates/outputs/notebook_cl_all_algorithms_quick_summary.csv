@@ -1,0 +1,7 @@
+stream,algorithm,test_mse_mean,test_mse_std,test_relative_l2_mean,test_relative_l2_std,repetitions
+advdiff1d_stream,a_gem,0.19015849522540443,,0.5561804526131892,,1
+advdiff1d_stream,ewc,0.19016665823836076,,0.5561923796880147,,1
+advdiff1d_stream,gem,0.19016665823836076,,0.5561923796880147,,1
+advdiff1d_stream,naive,0.19016665823836076,0.0,0.5561923796880147,0.0,2
+advdiff1d_stream,replay,0.19016665823836076,0.0,0.5561923796880147,0.0,2
+advdiff1d_stream,replay_ts,0.19016665823836076,0.0,0.5561923796880147,0.0,2

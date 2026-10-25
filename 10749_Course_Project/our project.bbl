@@ -1,0 +1,102 @@
+\begin{thebibliography}{18}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Aithal et~al.(2024)Aithal, Maini, Lipton, and Kolter]{aithal2024hallucinations}
+S.~K. Aithal, P.~Maini, Z.~C. Lipton, and J.~Z. Kolter.
+\newblock Understanding hallucinations in diffusion models through mode interpolation.
+\newblock In \emph{Advances in Neural Information Processing Systems}, 2024.
+
+\bibitem[Albergo et~al.(2023)Albergo, Boffi, and Vanden-Eijnden]{albergo2023stochastic}
+M.~S. Albergo, N.~M. Boffi, and E.~Vanden-Eijnden.
+\newblock Stochastic interpolants: A unifying framework for flows and diffusions.
+\newblock \emph{arXiv preprint arXiv:2303.08797}, 2023.
+
+\bibitem[Albergo et~al.(2024)Albergo, Goldstein, Boffi, Ranganath, and Vanden-Eijnden]{albergo2024couplings}
+M.~S. Albergo, M.~Goldstein, N.~M. Boffi, R.~Ranganath, and E.~Vanden-Eijnden.
+\newblock Stochastic interpolants with data-dependent couplings.
+\newblock In \emph{Proceedings of the 41st International Conference on Machine Learning}, 2024.
+
+\bibitem[Besnard and Ragot(2024)]{besnard2024continual}
+Q.~Besnard and N.~Ragot.
+\newblock Continual learning for time series forecasting: A first survey.
+\newblock \emph{Engineering Proceedings}, 68\penalty0 (1):\penalty0 49, 2024.
+\newblock \doi{10.3390/engproc2024068049}.
+
+\bibitem[Chen et~al.(2024)Chen, Goldstein, Hua, Albergo, Boffi, and Vanden-Eijnden]{chen2024forecasting}
+Y.~Chen, M.~Goldstein, M.~Hua, M.~S. Albergo, N.~M. Boffi, and E.~Vanden-Eijnden.
+\newblock Probabilistic forecasting with stochastic interpolants and {F}{\"o}llmer processes.
+\newblock In \emph{Proceedings of the 41st International Conference on Machine Learning}, volume 235 of \emph{Proceedings of Machine Learning Research}, pages 6728--6756, 2024.
+
+\bibitem[F{\"o}llmer(1986)]{follmer1986}
+H.~F{\"o}llmer.
+\newblock Time reversal on {W}iener space.
+\newblock In \emph{Stochastic Processes -- Mathematics and Physics}, volume 1158 of \emph{Lecture Notes in Mathematics}, pages 119--129. Springer, 1986.
+
+\bibitem[Hemati et~al.(2026)Hemati, Nguyen, and Sandfeld]{hemati2026continual}
+H.~Hemati, B.~D. Nguyen, and S.~Sandfeld.
+\newblock Continual learning for autoregressive {PDE} surrogates under evolving physical regimes.
+\newblock \emph{Machine Learning for Computational Science and Engineering}, 2026.
+\newblock \doi{10.1007/s44379-026-00085-9}.
+
+\bibitem[Ho et~al.(2020)Ho, Jain, and Abbeel]{ho2020ddpm}
+J.~Ho, A.~Jain, and P.~Abbeel.
+\newblock Denoising diffusion probabilistic models.
+\newblock In \emph{Advances in Neural Information Processing Systems}, 2020.
+
+\bibitem[Karras et~al.(2022)Karras, Aittala, Aila, and Laine]{karras2022edm}
+T.~Karras, M.~Aittala, T.~Aila, and S.~Laine.
+\newblock Elucidating the design space of diffusion-based generative models.
+\newblock In \emph{Advances in Neural Information Processing Systems}, 2022.
+
+\bibitem[Kirkpatrick et~al.(2017)Kirkpatrick, Pascanu, Rabinowitz, Veness, Desjardins, Rusu, Milan, Quan, Ramalho, Grabska-Barwinska, Hassabis, Clopath, Kumaran, and Hadsell]{kirkpatrick2017overcoming}
+J.~Kirkpatrick, R.~Pascanu, N.~Rabinowitz, J.~Veness, G.~Desjardins, A.~A. Rusu, K.~Milan, J.~Quan, T.~Ramalho, A.~Grabska-Barwinska, D.~Hassabis, C.~Clopath, D.~Kumaran, and R.~Hadsell.
+\newblock Overcoming catastrophic forgetting in neural networks.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 114\penalty0 (13):\penalty0 3521--3526, 2017.
+\newblock \doi{10.1073/pnas.1611835114}.
+
+\bibitem[Kohl et~al.(2023)Kohl, Chen, and Thuerey]{kohl2023benchmarking}
+G.~Kohl, L.-W. Chen, and N.~Thuerey.
+\newblock Benchmarking autoregressive conditional diffusion models for turbulent flow simulation.
+\newblock \emph{arXiv preprint arXiv:2309.01745}, 2023.
+
+\bibitem[Lipman et~al.(2023)Lipman, Chen, Ben-Hamu, Nickel, and Le]{lipman2023flow}
+Y.~Lipman, R.~T.~Q. Chen, H.~Ben-Hamu, M.~Nickel, and M.~Le.
+\newblock Flow matching for generative modeling.
+\newblock In \emph{International Conference on Learning Representations}, 2023.
+
+\bibitem[Liu et~al.(2023)Liu, Vahdat, Huang, Theodorou, Nie, and Anandkumar]{liu2023i2sb}
+G.-H. Liu, A.~Vahdat, D.-A. Huang, E.~A. Theodorou, W.~Nie, and A.~Anandkumar.
+\newblock {I$^2$SB}: Image-to-image {S}chr{\"o}dinger bridge.
+\newblock In \emph{Proceedings of the 40th International Conference on Machine Learning}, 2023.
+
+\bibitem[Price et~al.(2025)Price, Sanchez-Gonzalez, Alet, Andersson, El-Kadi, Masters, Ewalds, Stott, Mohamed, Battaglia, Lam, and Willson]{price2025gencast}
+I.~Price, A.~Sanchez-Gonzalez, F.~Alet, T.~R. Andersson, A.~El-Kadi, D.~Masters, T.~Ewalds, J.~Stott, S.~Mohamed, P.~Battaglia, R.~Lam, and M.~Willson.
+\newblock Probabilistic weather forecasting with machine learning.
+\newblock \emph{Nature}, 637:\penalty0 84--90, 2025.
+
+\bibitem[Rasul et~al.(2021)Rasul, Seward, Schuster, and Vollgraf]{rasul2021timegrad}
+K.~Rasul, C.~Seward, I.~Schuster, and R.~Vollgraf.
+\newblock Autoregressive denoising diffusion models for multivariate probabilistic time series forecasting.
+\newblock In \emph{Proceedings of the 38th International Conference on Machine Learning}, 2021.
+
+\bibitem[Rolnick et~al.(2019)Rolnick, Ahuja, Schwarz, Lillicrap, and Wayne]{rolnick2019experience}
+D.~Rolnick, A.~Ahuja, J.~Schwarz, T.~Lillicrap, and G.~Wayne.
+\newblock Experience replay for continual learning.
+\newblock In \emph{Advances in Neural Information Processing Systems}, volume~32, 2019.
+\newblock URL \url{https://arxiv.org/abs/1811.11682}.
+
+\bibitem[Song et~al.(2021{\natexlab{a}})Song, Meng, and Ermon]{song2021ddim}
+J.~Song, C.~Meng, and S.~Ermon.
+\newblock Denoising diffusion implicit models.
+\newblock In \emph{International Conference on Learning Representations}, 2021{\natexlab{a}}.
+
+\bibitem[Song et~al.(2021{\natexlab{b}})Song, Sohl-Dickstein, Kingma, Kumar, Ermon, and Poole]{song2021sde}
+Y.~Song, J.~Sohl-Dickstein, D.~P. Kingma, A.~Kumar, S.~Ermon, and B.~Poole.
+\newblock Score-based generative modeling through stochastic differential equations.
+\newblock In \emph{International Conference on Learning Representations}, 2021{\natexlab{b}}.
+
+\end{thebibliography}

@@ -1,0 +1,17 @@
+- device=cpu
+- seed=123
+- logger.experiment=cl_advdiff1d_smoke_replay
+- logger.outputs_dir=outputs/smoke_tests/advdiff1d_v2/replay
+- model=fno1d
+- model.model_parameters.initial_step=3
+- model.model_parameters.num_embs=6
+- cl_algorithm=replay
+- cl_algorithm.algorithm_parameters.epochs=1
+- cl_algorithm.algorithm_parameters.batch_size=32
+- cl_algorithm.algorithm_parameters.num_workers=0
+- stream=advdiff1d_smoke
+- stream.dataset.dataset_params.dataset_root=./data/advdiff1d_stream
+- stream.dataset.dataset_params.context_length=3
+- stream.dataset.dataset_params.rollout_steps=2
+- stream.dataset.dataset_params.rollout_steps_test=2
+- checkpoint_path=null

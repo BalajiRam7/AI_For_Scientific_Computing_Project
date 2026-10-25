@@ -1,0 +1,23 @@
+equation: advdiff1d
+file_path: sim_5547.npz
+parameters:
+  L: 1.0
+  T: 1.0
+  n_x: 100
+  n_t: 99
+  CFL: 0.5
+  diffusivity:
+    id: diffusivity_value_3
+    type: constant
+    value: 0.008
+  velocity:
+    id: velocity_value_2
+    type: constant
+    value: 0.3
+  ic:
+    type: grf
+    ell: 0.08
+    normalize: true
+    placeholder: 0.03804562833584873
+  bc:
+    type: Periodic

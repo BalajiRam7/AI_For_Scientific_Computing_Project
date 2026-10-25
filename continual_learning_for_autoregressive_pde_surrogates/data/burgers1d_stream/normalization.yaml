@@ -1,0 +1,28 @@
+normalization_stats:
+  inputs.n_t:
+    min: 99.0
+    max: 99.0
+  inputs.viscosity.value:
+    min: 0.001
+    max: 0.01
+  inputs.ic.normalize:
+    min: 1.0
+    max: 1.0
+  inputs.n_x:
+    min: 100.0
+    max: 100.0
+  inputs.ic.placeholder:
+    min: 0.0013733482053904346
+    max: 0.09891388225789031
+  inputs.ic.ell:
+    min: 0.08
+    max: 0.08
+  inputs.L:
+    min: 1.0
+    max: 1.0
+  inputs.T:
+    min: 1.0
+    max: 1.0
+  u:
+    min: -1.0
+    max: 1.0

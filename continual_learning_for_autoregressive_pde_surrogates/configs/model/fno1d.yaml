@@ -1,0 +1,10 @@
+model_name: fno1d
+
+model_parameters:
+  num_channels: 1
+  modes: 16
+  width: 64
+  initial_step: 10
+  num_embs: 1
+  emb_dim: 2
+  learnable_emb: False

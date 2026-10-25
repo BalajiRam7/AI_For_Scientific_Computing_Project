@@ -1,0 +1,11 @@
+model_name: fno2d
+
+model_parameters:
+  num_channels: 1
+  modes1: 12
+  modes2: 12
+  width: 20
+  initial_step: 10
+  num_embs: 1 
+  emb_dim: 2
+  learnable_emb: False

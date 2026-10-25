@@ -1,0 +1,21 @@
+equation_name: "advdiff1d"
+
+equation_parameters:
+  L: 1.0
+  T: 1.0
+  n_x: 100
+  n_t: 99
+  CFL: 0.5
+
+  diffusivity: 
+   - {"id": "diffusivity_value_1", "type": "constant", "value": 0.001}
+   - {"id": "diffusivity_value_2", "type": "constant", "value": 0.004}
+   - {"id": "diffusivity_value_3", "type": "constant", "value": 0.008}
+
+  velocity: 
+    - {"id": "velocity_value_1", "type": "constant", "value": 0.8}
+    - {"id": "velocity_value_2", "type": "constant", "value": 0.3}
+
+  ic: {"type": "grf", "ell": 0.08, "normalize": true, "placeholder": "Uniform(0.0, 0.1, 1000)"}
+
+  bc: {"type": "Periodic"}

@@ -1,0 +1,22 @@
+defaults:
+  - _self_
+  - cl_algorithm: naive
+  - model: fno1d
+  - stream: advdiff1d_stream
+
+device: cpu
+seed: 123
+checkpoint_path: null
+
+logger:
+  outputs_dir: outputs/
+  repo: ".aim"
+  experiment: default
+  tags: NULL 
+
+hydra:
+  run:
+    dir: .hydra/${now:%Y-%m-%d}/${now:%H-%M-%S}
+  sweep:
+    dir: .hydra/multirun/${now:%Y-%m-%d}
+    subdir: ${now:%H-%M-%S}/${hydra.job.num}

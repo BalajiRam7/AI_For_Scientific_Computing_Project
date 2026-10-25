@@ -1,0 +1,15 @@
+trainer_name: joint_trainer
+
+trainer_parameters:
+  num_workers: 0
+  batch_size: 64
+  epochs: 1 
+  optimizer: adam
+  optimizer_params:
+    lr: 0.001
+    weight_decay: 0.0001
+  criterion: mse
+  criterion_params: {}
+  scheduler_params:
+    milestones: [50]
+    gamma: 0.5

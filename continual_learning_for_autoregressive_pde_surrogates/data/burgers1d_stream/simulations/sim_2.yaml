@@ -1,0 +1,18 @@
+equation: burgers1d
+file_path: sim_2.npz
+parameters:
+  L: 1.0
+  T: 1.0
+  n_x: 100
+  n_t: 99
+  viscosity:
+    id: viscosity_value_1
+    type: constant
+    value: 0.001
+  ic:
+    type: grf
+    ell: 0.08
+    normalize: true
+    placeholder: 0.04737092022416409
+  bc:
+    type: Periodic

@@ -1,0 +1,23 @@
+stream_name: "advdiff1d_smoke"
+seed: 123
+train_test_split_ratio: 0.8
+train_val_split_ratio: null
+
+dataset:
+  dataset_name: "advdiff1d"
+  dataset_params:
+    dataset_root: "data/advdiff1d_stream"
+    exp_id: null
+    num_snapshots_per_sim: 16
+    context_length: 3
+    rollout_steps: 2
+    rollout_steps_test: 2
+    aux_features: [exp_id]
+
+stream_mode: smoke
+experience_list:
+  smoke:
+    - cond_diff_1: [diffusivity.id, equals, diffusivity_value_1]
+      cond_vel_1: [velocity.id, equals, velocity_value_1]
+    - cond_diff_2: [diffusivity.id, equals, diffusivity_value_2]
+      cond_vel_2: [velocity.id, equals, velocity_value_2]

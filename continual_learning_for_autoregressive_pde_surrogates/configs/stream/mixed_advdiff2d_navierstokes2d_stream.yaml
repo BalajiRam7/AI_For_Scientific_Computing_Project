@@ -1,0 +1,74 @@
+stream_name: "mixed_advdiff2d_navierstokes2d_stream"
+
+# ============================ Final mixed stream 
+seed: 42
+stream_mode: di
+
+train_test_split_ratio: 0.9
+train_val_split_ratio: null
+dataset:
+  dataset_name: "ds_name"
+  dataset_params:
+    dataset_root: "data/"
+    context_length: 10
+    rollout_steps: 50
+    rollout_steps_test: null
+    aux_features: Null
+
+final_stream_order: 
+  - ["stream_1", 2]
+  - ["stream_2", 0]
+  - ["stream_1", 1]
+  - ["stream_2", 3]
+  - ["stream_1", 0]
+  - ["stream_2", 2]
+  - ["stream_1", 3]
+  - ["stream_2", 1]
+
+# ============================ Stream 1
+stream_1:
+  stream_name: "advdiff2d_stream"
+  dataset:
+    dataset_name: "advdiff2d"
+    dataset_params:
+      dataset_root: "data/..."
+      exp_id: Null
+      num_snapshots_per_sim: 100
+      context_length: 10
+      rollout_steps: 30
+      rollout_steps_test: null
+      aux_features: [exp_id]
+  experience_list:
+    di:
+      - cond_diff_3: [diffusivity.id, equals, diffusivity_value_3]
+        cond_vel_1: [velocity.id, equals, velocity_value_1]
+      - cond_diff_2: [diffusivity.id, equals, diffusivity_value_2]
+        cond_vel_2: [velocity.id, equals, velocity_value_2]
+      - cond_diff_1: [diffusivity.id, equals, diffusivity_value_1]
+        cond_vel_1: [velocity.id, equals, velocity_value_1]
+      - cond_diff_3: [diffusivity.id, equals, diffusivity_value_3]
+        cond_vel_2: [velocity.id, equals, velocity_value_2]
+      - cond_diff_2: [diffusivity.id, equals, diffusivity_value_2]
+        cond_vel_1: [velocity.id, equals, velocity_value_1]
+
+# ============================ Stream 2
+stream_2:
+  stream_name: "navierstokes2d_stream"
+  dataset:
+    dataset_name: "navierstokes2d"
+    dataset_params:
+      dataset_root: "data/..."
+      exp_id: Null
+      num_snapshots_per_sim: 100
+      context_length: 10
+      rollout_steps: 30
+      rollout_steps_test: null
+      aux_features: [exp_id]
+  experience_list:
+    di:
+      - cond_vis5: [viscosity.id, equals, viscosity_5]
+      - cond_vis1: [viscosity.id, equals, viscosity_1]
+      - cond_vis6: [viscosity.id, equals, viscosity_6]
+      - cond_vis2: [viscosity.id, equals, viscosity_2]
+      - cond_vis4: [viscosity.id, equals, viscosity_4]
+

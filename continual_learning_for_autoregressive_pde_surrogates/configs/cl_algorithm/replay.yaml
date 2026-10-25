@@ -1,0 +1,16 @@
+algorithm_name: replay
+
+algorithm_parameters:
+  optimizer: adam
+  optimizer_params:
+    lr: 0.001
+  criterion: mse
+  criterion_params: {}
+  batch_size: 32
+  epochs: 50
+  memory_size: 200
+  memory_seed: 42
+  memory_mode: "reservoir"
+  replay_loss_coef: 1.0
+  replay_batch_size: 64
+  num_workers: 0

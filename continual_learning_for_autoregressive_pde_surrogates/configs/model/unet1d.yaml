@@ -1,0 +1,10 @@
+model_name: unet1d
+
+model_parameters:
+  num_channels: 1
+  initial_step: 10
+  init_features: 32
+  num_embs: 1
+  emb_dim: 2
+  learnable_emb: false
+

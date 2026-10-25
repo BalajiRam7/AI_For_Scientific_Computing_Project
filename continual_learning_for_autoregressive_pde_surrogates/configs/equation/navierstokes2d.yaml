@@ -1,0 +1,21 @@
+equation_name: "navierstokes2d"
+
+equation_parameters:
+  Lx: 1.0
+  Ly: 1.0
+  T: 5.0
+  n_x: 64
+  n_y: 64
+  n_t: 99
+  source: null
+  CFL: 0.5
+
+  viscosity: 
+    - {"id": "viscosity_1", "type": "constant", "value": 0.00007}
+    - {"id": "viscosity_2", "type": "constant", "value": 0.00009}
+    - {"id": "viscosity_3", "type": "constant", "value": 0.0002}
+    - {"id": "viscosity_4", "type": "constant", "value": 0.0004}
+    - {"id": "viscosity_5", "type": "constant", "value": 0.0006}
+    - {"id": "viscosity_6", "type": "constant", "value": 0.0008}
+
+  ic: {"type": "grf_operator", "normalize": True, "placeholder": "Uniform(0.0, 0.1, 1000)"}

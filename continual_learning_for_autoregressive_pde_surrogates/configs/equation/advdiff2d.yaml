@@ -1,0 +1,22 @@
+equation_name: "advdiff2d"
+
+equation_parameters:
+  Lx: 1.0
+  Ly: 1.0
+  n_x: 64
+  n_y: 64
+  T: 1.0
+  n_t: 99
+
+  diffusivity: 
+   - {"id": "diffusivity_value_1", "type": "constant", "value": 0.004}
+   - {"id": "diffusivity_value_2", "type": "constant", "value": 0.007}
+   - {"id": "diffusivity_value_3", "type": "constant", "value": 0.01}
+
+  velocity: 
+    - {"id": "velocity_value_1", "v_x": -0.1, "v_y": 0.5}
+    - {"id": "velocity_value_2", "v_x": 0.1, "v_y": 0.5}
+
+  ic: {"type":"grf", "ell": 0.08, "normalize": true, "placeholder": "Uniform(0.0, 0.1, 1000)"}
+
+  bc: {type: "Periodic"}

@@ -1,0 +1,34 @@
+normalization_stats:
+  inputs.CFL:
+    min: 0.5
+    max: 0.5
+  inputs.velocity.value:
+    min: 0.3
+    max: 0.8
+  inputs.n_x:
+    min: 100.0
+    max: 100.0
+  inputs.ic.normalize:
+    min: 1.0
+    max: 1.0
+  inputs.ic.placeholder:
+    min: 4.967467993943764e-07
+    max: 0.09998947505149464
+  inputs.diffusivity.value:
+    min: 0.001
+    max: 0.008
+  inputs.T:
+    min: 1.0
+    max: 1.0
+  inputs.n_t:
+    min: 99.0
+    max: 99.0
+  inputs.ic.ell:
+    min: 0.08
+    max: 0.08
+  inputs.L:
+    min: 1.0
+    max: 1.0
+  u:
+    min: -1.0
+    max: 1.0

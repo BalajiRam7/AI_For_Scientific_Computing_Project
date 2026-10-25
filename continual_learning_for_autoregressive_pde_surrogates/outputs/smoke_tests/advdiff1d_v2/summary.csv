@@ -1,0 +1,4 @@
+algorithm,seed,device,experiences,num_snapshots_per_sim,context_length,rollout_steps,epochs,batch_size,final_test_loss_stream,final_test_relative_l2_stream
+naive,123,cpu,2,16,3,2,1,32,0.002566904536903497,0.05318025629726391
+replay,123,cpu,2,16,3,2,1,32,0.000024762898809223605,0.00610924687979985
+ewc,123,cpu,2,16,3,2,1,32,0.001650290437742528,0.037801787314508575

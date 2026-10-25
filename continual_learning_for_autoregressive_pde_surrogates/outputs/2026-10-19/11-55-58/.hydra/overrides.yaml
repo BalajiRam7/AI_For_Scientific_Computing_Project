@@ -1,0 +1,4 @@
+- save_all_snapshots=True
+- num_parallel_sims=5
+- equation=advdiff1d
+- dataset_save_path=data/advdiff1d_stream

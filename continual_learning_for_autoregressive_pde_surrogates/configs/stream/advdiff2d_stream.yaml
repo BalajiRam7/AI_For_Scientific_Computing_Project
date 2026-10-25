@@ -1,0 +1,47 @@
+stream_name: "advdiff2d_stream"
+seed: 42
+train_test_split_ratio: 0.9
+train_val_split_ratio: null
+
+dataset:
+  dataset_name: "advdiff2d"
+  dataset_params:
+    dataset_root: "data/..."
+    exp_id: Null
+    num_snapshots_per_sim: 100
+    context_length: 10
+    rollout_steps: 30
+    rollout_steps_test: null
+    aux_features: [exp_id]
+
+stream_mode: full
+experience_list:
+  full:
+    - cond_diff_1: [diffusivity.id, equals, diffusivity_value_1]
+      cond_vel_1: [velocity.id, equals, velocity_value_1]
+    - cond_diff_2: [diffusivity.id, equals, diffusivity_value_2]
+      cond_vel_1: [velocity.id, equals, velocity_value_1]
+    - cond_diff_3: [diffusivity.id, equals, diffusivity_value_3]
+      cond_vel_1: [velocity.id, equals, velocity_value_1]
+    - cond_diff_1: [diffusivity.id, equals, diffusivity_value_1]
+      cond_vel_2: [velocity.id, equals, velocity_value_2]
+    - cond_diff_2: [diffusivity.id, equals, diffusivity_value_2]
+      cond_vel_2: [velocity.id, equals, velocity_value_2]
+    - cond_diff_3: [diffusivity.id, equals, diffusivity_value_3]
+      cond_vel_2: [velocity.id, equals, velocity_value_2]
+
+  pretrain:
+    - cond_diff_1: [diffusivity.id, equals, diffusivity_value_1]
+      cond_vel_2: [velocity.id, equals, velocity_value_2]
+
+  di:
+    - cond_diff_3: [diffusivity.id, equals, diffusivity_value_3]
+      cond_vel_1: [velocity.id, equals, velocity_value_1]
+    - cond_diff_2: [diffusivity.id, equals, diffusivity_value_2]
+      cond_vel_2: [velocity.id, equals, velocity_value_2]
+    - cond_diff_1: [diffusivity.id, equals, diffusivity_value_1]
+      cond_vel_1: [velocity.id, equals, velocity_value_1]
+    - cond_diff_3: [diffusivity.id, equals, diffusivity_value_3]
+      cond_vel_2: [velocity.id, equals, velocity_value_2]
+    - cond_diff_2: [diffusivity.id, equals, diffusivity_value_2]
+      cond_vel_1: [velocity.id, equals, velocity_value_1]

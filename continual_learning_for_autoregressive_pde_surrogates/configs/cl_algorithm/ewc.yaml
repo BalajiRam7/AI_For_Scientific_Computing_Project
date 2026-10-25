@@ -1,0 +1,12 @@
+algorithm_name: ewc
+
+algorithm_parameters:
+  optimizer: adam
+  optimizer_params:
+    lr: 0.001
+  criterion: mse
+  criterion_params: {}
+  batch_size: 32
+  epochs: 50
+  num_workers: 0
+  ewc_lambda: 5.0

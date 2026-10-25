@@ -1,0 +1,21 @@
+equation_name: "burgers2d"
+
+equation_parameters:
+  Lx: 1.0
+  Ly: 1.0
+  n_x: 64
+  n_y: 64
+  T: 0.04
+  n_t: 99
+
+  viscosity: 
+    - {"id": "viscosity_value_1", "type": "constant", "value": 0.001}
+    - {"id": "viscosity_value_2", "type": "constant", "value": 0.005}
+    - {"id": "viscosity_value_3", "type": "constant", "value": 0.01}
+    - {"id": "viscosity_value_4", "type": "constant", "value": 0.02}
+    - {"id": "viscosity_value_5", "type": "constant", "value": 0.03}
+
+  ic: {"type":"grf", "ell": 0.08, "std_u": 1.0, "std_v": 1.0, "mean_u": 0.0, "mean_v": 0.0, "shared": False, "normalize": True, "placeholder": "Uniform(0.0, 0.1, 1000)"}
+
+  bc: {type: "Periodic"}
+

@@ -1,0 +1,6 @@
+defaults:
+  - equation: advdiff1d
+
+num_parallel_sims: 5
+save_all_snapshots: true
+dataset_save_path: data/

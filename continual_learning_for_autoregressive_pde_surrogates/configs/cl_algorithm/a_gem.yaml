@@ -1,0 +1,15 @@
+algorithm_name: a_gem
+
+algorithm_parameters:
+  optimizer: adam
+  optimizer_params:
+    lr: 0.001
+  criterion: mse
+  criterion_params: {}
+  batch_size: 32
+  epochs: 50
+  num_workers: 0
+  memory_size: 200
+  memory_batch_size: 10
+  memory_mode: "experience_balanced"
+  eps_agem: 0.000001

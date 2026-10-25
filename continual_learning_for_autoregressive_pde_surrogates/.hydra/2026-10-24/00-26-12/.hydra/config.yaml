@@ -1,0 +1,114 @@
+device: cpu
+seed: 123
+checkpoint_path: null
+logger:
+  outputs_dir: outputs/smoke_tests/mixed_advdiff1d_burgers1d/replay_ts
+  repo: .aim
+  experiment: cl_mixed_advdiff1d_burgers1d_smoke_replay_ts
+  tags: null
+cl_algorithm:
+  algorithm_name: replay_ts
+  algorithm_parameters:
+    optimizer: adam
+    optimizer_params:
+      lr: 0.001
+    criterion: mse
+    criterion_params: {}
+    batch_size: 32
+    epochs: 1
+    num_workers: 0
+    memory_size: 20
+    memory_seed: 123
+    memory_mode: experience_balanced
+    replay_loss_coef: 1.0
+    replay_batch_size: 32
+    replay_slice_factor: 2
+    log_grad_conflict: false
+model:
+  model_name: fno1d
+  model_parameters:
+    num_channels: 1
+    modes: 16
+    width: 64
+    initial_step: 3
+    num_embs: 10
+    emb_dim: 2
+    learnable_emb: false
+stream:
+  stream_name: mixed_advdiff1d_burgers1d_smoke
+  seed: 123
+  train_test_split_ratio: 0.8
+  train_val_split_ratio: null
+  stream_mode: smoke
+  dataset:
+    dataset_name: mixed
+    dataset_params:
+      dataset_root: ./data/mixed_advdiff1d_burgers1d_smoke
+      context_length: 3
+      rollout_steps: 2
+      rollout_steps_test: 2
+      aux_features:
+      - exp_id
+  final_stream_order:
+  - - stream_1
+    - 0
+  - - stream_2
+    - 0
+  - - stream_1
+    - 1
+  - - stream_2
+    - 1
+  stream_1:
+    stream_name: advdiff1d_stream
+    dataset:
+      dataset_name: advdiff1d
+      dataset_params:
+        dataset_root: data/advdiff1d_stream
+        exp_id: null
+        num_snapshots_per_sim: 16
+        context_length: 3
+        rollout_steps: 2
+        rollout_steps_test: 2
+        aux_features:
+        - exp_id
+    experience_list:
+      smoke:
+      - cond_diff_1:
+        - diffusivity.id
+        - equals
+        - diffusivity_value_1
+        cond_vel_1:
+        - velocity.id
+        - equals
+        - velocity_value_1
+      - cond_diff_2:
+        - diffusivity.id
+        - equals
+        - diffusivity_value_2
+        cond_vel_2:
+        - velocity.id
+        - equals
+        - velocity_value_2
+  stream_2:
+    stream_name: burgers1d_stream
+    dataset:
+      dataset_name: burgers1d
+      dataset_params:
+        dataset_root: data/burgers1d_stream
+        exp_id: null
+        num_snapshots_per_sim: 16
+        context_length: 3
+        rollout_steps: 2
+        rollout_steps_test: 2
+        aux_features:
+        - exp_id
+    experience_list:
+      smoke:
+      - cond_vis_1:
+        - viscosity.id
+        - equals
+        - viscosity_value_1
+      - cond_vis_2:
+        - viscosity.id
+        - equals
+        - viscosity_value_2
